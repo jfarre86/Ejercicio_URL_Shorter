@@ -1,0 +1,22 @@
+<h1>ShortUrls#new</h1>
+<h3>esto es un prueba conforme el NEW funciona</h3>
+
+	<%= form_for(@short_urls) do |f| %>
+
+      <div class="field">
+      			<%= f.text_area :url, placeholder: "Escribe aquí la URL" , style:"height:300px;"#, class:"form-control"
+      			# este método .text_area del objeto f lo que hace es escupir un tag <textarea> y su primer parámetro hace referencia al campo de la tabla que va a mostrar
+      			%>
+      </div>
+
+  <!--        <div class="field">
+          			<%= f.text_area :id_url, placeholder: "Escribe aquí el ID" , style:"height:300px;"#, class:"form-control"
+          			# este método .text_area del objeto f lo que hace es escupir un tag <textarea> y su primer parámetro hace referencia al campo de la tabla que va a mostrar
+          			%>
+          </did_iv> -->
+
+      <div class="actions">
+            <%= f.submit "Guardar" %>
+      </div>
+<% end %>
+<p>Find me in app/views/short_urls/new.html.erb</p>
