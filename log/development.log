@@ -639,3 +639,239 @@ NoMethodError (undefined method `attr_accessible' for ShortUrl (call 'ShortUrl.c
 app/models/short_url.rb:2:in `<class:ShortUrl>'
 app/models/short_url.rb:1:in `<top (required)>'
 app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 17:10:17 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 17:16:15 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:29:32 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:29:44 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:30:32 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:30:59 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:31:48 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:34:51 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:37:00 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:38:15 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:40:22 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+LoadError (Unable to autoload constant Short_url, expected C:/RAILS/Ejercicio_URL_Shorter/app/models/short_url.rb to define it):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:48:30 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 58ms
+
+
+  
+NameError (undefined local variable or method `short_urls' for #<ShortUrlsController:0x392b7b8>):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:51:06 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 62ms
+
+
+  
+NameError (undefined local variable or method `short_url' for #<ShortUrlsController:0x926f9b8>):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:51:20 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 56ms
+
+
+  
+NameError (undefined local variable or method `shortUrl' for #<ShortUrlsController:0x9412f68>):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 18:55:59 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:34:42 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_urls):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:36:14 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_urls_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:37:16 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_urls):
+  
+app/controllers/short_urls_controller.rb:13:in `short_urls_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:41:47 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 500 Internal Server Error in 55ms
+
+
+  
+NameError (undefined local variable or method `short_urls_params' for #<ShortUrlsController:0xbba7fa8>):
+  
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:42:53 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_urls_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:43:22 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_urls_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:49:57 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 3ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:51:11 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 7ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_urls_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:52:22 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 3ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_urls):
+  
+app/controllers/short_urls_controller.rb:13:in `short_urls_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-16 19:52:36 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 3ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
