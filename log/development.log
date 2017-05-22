@@ -1503,3 +1503,105 @@ Migrating to CreateShortUrls (20170515155408)
   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-22 17:21:26.476486"], ["updated_at", "2017-05-22 17:21:26.476486"]]
   [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-22 19:25:09 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 101ms (Views: 78.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-22 19:25:23 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:26:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-22 19:36:36 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 83ms (Views: 59.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-22 19:37:18 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 38.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-22 19:37:26 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+jnPkFZ/wD37cCbgx6KdcOY7hVQYmkLVd3J+xHGmLSavjFP8K4/5QZ1BuU8dG+POqpPJb0sPokFGmcrLTRVG+w==", "short_url"=>{"url"=>"Clientes.synergie.es"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "Clientes.synergie.es"], ["created_at", "2017-05-22 17:37:26.313486"], ["updated_at", "2017-05-22 17:37:26.313486"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 19ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-22 19:37:31 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 53ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-22 19:37:52 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-22 19:37:56 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WN7Hj5o3aEB817PCHg/7b6sNWS8CiZ8pqxApbdGyy/cNa1vj58dRPBrmLG3EtoXR56UVFFEcf72a+51i7QGgKg==", "short_url"=>{"url"=>"https://stackoverflow.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "https://stackoverflow.com"], ["created_at", "2017-05-22 17:37:56.596486"], ["updated_at", "2017-05-22 17:37:56.596486"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 17ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-22 19:38:00 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 37.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-22 19:38:16 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-22 19:38:18 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkKzZ+s2mgrGkZ92azcmxxEJfZndkn7Q95ld57Jc6m8r9y8LlsajdqCgANmxjlh5XaExoo4HnkTGcunoju+Bsg==", "short_url"=>{"url"=>"www.youtube.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.youtube.com"], ["created_at", "2017-05-22 17:38:18.500486"], ["updated_at", "2017-05-22 17:38:18.500486"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 21ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-22 19:38:22 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
