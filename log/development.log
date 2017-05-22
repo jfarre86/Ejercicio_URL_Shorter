@@ -906,3 +906,544 @@ ActionController::ParameterMissing (param is missing or the value is empty: shor
   
 app/controllers/short_urls_controller.rb:13:in `short_url_params'
 app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:01:58 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 5ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: shortUrl):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:05:59 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:31:21 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:31:59 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 1ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:34:09 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 0ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: short_url):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:34:30 +0200
+Processing by ShortUrlsController#new as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: ):
+  
+app/controllers/short_urls_controller.rb:13:in `short_url_params'
+app/controllers/short_urls_controller.rb:3:in `new'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 13:49:02 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (103.0ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `short_urls_path' for #<#<Class:0x41f8da0>:0x41e4b68>):
+    1: <h1>ShortUrls#new</h1>
+    2: <h3>esto es un prueba conforme el NEW funciona</h3>
+    3: 
+    4: <%= form_for(@short_url) do |f| %>
+    5: 
+    6:       <div class="field">
+    7:       			<%= f.text_area :url,
+  
+app/views/short_urls/new.html.erb:4:in `_app_views_short_urls_new_html_erb__845116144_34590648'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 14:17:25 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id_url' for #<ShortUrl:0x5166b40>):
+    12:       </div>
+    13: 
+    14:   <!--        <div class="field">
+    15:           			<%= f.text_area :id_url, placeholder: "Escribe aquí el ID" , style:"height:300px;"#, class:"form-control"
+    16:           			# este método .text_area del objeto f lo que hace es escupir un tag <textarea> y su primer parámetro hace referencia al campo de la tabla que va a mostrar
+    17:           			%>
+    18:           </did_iv> -->
+  
+app/views/short_urls/new.html.erb:15:in `block in _app_views_short_urls_new_html_erb__845116144_42301392'
+app/views/short_urls/new.html.erb:4:in `_app_views_short_urls_new_html_erb__845116144_42301392'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-17 14:18:06 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 119ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-17 14:19:33 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oqLrSj9mZ+8WtjNK80NxKuHAk3WGpsLzHDTIViW0KZ73F3cmQpZek3CHrOUp+g+UrWjfTtUzImct33xZGQdCQw==", "short_url"=>{"url"=>"clientes.Synergie.es"}, "commit"=>"Guardar"}
+No template found for ShortUrlsController#create, rendering head :no_content
+Completed 204 No Content in 422ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-05-17 14:19:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/short_urls/1"):
+  
+actionpack (5.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/short_urls/new/1" for 127.0.0.1 at 2017-05-17 14:20:02 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/short_urls/new/1"):
+  
+actionpack (5.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-05-18 16:05:57 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.1.0/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 78ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-18 16:06:07 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 134ms (Views: 111.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 16:43:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/short_urls/index"):
+  
+actionpack (5.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 16:45:34 +0200
+Processing by ShortUrlsController#index as HTML
+Completed 406 Not Acceptable in 510ms
+
+
+  
+ActionController::UnknownFormat (ShortUrlsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.0) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.0) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.0) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.0) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.0) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.0) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.0) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.0) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.0) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.0) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.0) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.0) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.0) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.0) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.0) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.0) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.0) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.0) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.0) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.2) lib/rack/etag.rb:25:in `call'
+rack (2.0.2) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.2) lib/rack/head.rb:12:in `call'
+rack (2.0.2) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.2) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.0) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.0) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:34:53 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  Rendered short_urls/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 49ms
+
+
+  
+SyntaxError (C:/RAILS/Ejercicio_URL_Shorter/app/views/short_urls/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/short_urls/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:36:01 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  Rendered short_urls/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 44ms
+
+
+  
+SyntaxError (C:/RAILS/Ejercicio_URL_Shorter/app/views/short_urls/index.html.erb:4: syntax error, unexpected '|', expecting '}'
+'.freeze; @short_url.all.each do { |url|  } 
+                                    ^):
+  
+app/views/short_urls/index.html.erb:4: syntax error, unexpected '|', expecting '}'
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:36:59 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 65ms (Views: 54.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-18 17:37:21 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 62ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-18 17:37:32 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"62vA/FKJ0hjbhyWeyE/J+YavZmAGlO+qvL23G/vLrTi+3lyQL3nrZL22ujES9rdHygcqW1UBDz6NVgMUx3jG5Q==", "short_url"=>{"url"=>"clientes.synergie.es"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-05-18 15:37:32.808481"], ["updated_at", "2017-05-18 15:37:32.808481"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 14.0ms)
+
+
+  
+NoMethodError (undefined method `short_url_url' for #<ShortUrlsController:0xa0193a0>):
+  
+app/controllers/short_urls_controller.rb:9:in `create'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-18 17:38:34 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 66ms (Views: 45.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-18 17:39:02 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xUm9cqvMVcnez71YTNYxhFujP5V4iFubVrhoWqabjN6Q/CEe1jxstbj+IveWb086Fwtzrisduw9nU9xVmijnAw==", "short_url"=>{"url"=>"support.synergie-ett.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-05-18 15:39:02.364436"], ["updated_at", "2017-05-18 15:39:02.364436"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 13.0ms)
+
+
+  
+NoMethodError (undefined method `short_url_url' for #<ShortUrlsController:0x93ce388>):
+  
+app/controllers/short_urls_controller.rb:9:in `create'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-18 17:40:00 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-18 17:42:31 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tHqN366gsxaH2o6BhKxVmCWTQeDghO8HNT+iJN/oM+vhzxGz01CKauHrES5eFSsmaTsN27MRD5ME1BYr41tYNg==", "short_url"=>{"url"=>"http://stackoverflow.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-05-18 15:42:31.989397"], ["updated_at", "2017-05-18 15:42:31.989397"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 12.0ms)
+
+
+  
+NoMethodError (undefined method `index' for #<ShortUrl:0x90f44e8>):
+  
+app/controllers/short_urls_controller.rb:9:in `create'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-18 17:43:17 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 70ms (Views: 47.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-18 17:43:21 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h8aTRSrQNmE/ySJ9QaysXxkzjpTKz1k0vu8YElwPTibScw8pVyAPHVn4vdKbFdLhVZvCr5lauaCPBKwdYLwl+w==", "short_url"=>{"url"=>"www.youtube.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-05-18 15:43:21.665364"], ["updated_at", "2017-05-18 15:43:21.665364"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url.index
+Completed 302 Found in 19ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-18 17:43:45 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-18 17:43:56 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hUBod+F/ksX8Eti0BLI4+Qkv5u6S2VSeXsNRvdaoCsHQ9fQbnI+ruZojRxveC0ZHRYeq1cFMtApvKOWy6hthHA==", "short_url"=>{"url"=>"www.youtube.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-05-18 15:43:56.226819"], ["updated_at", "2017-05-18 15:43:56.226819"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 33ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:44:12 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 71ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:53:42 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 57ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:53:52 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:54:20 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:54:43 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 56ms (Views: 44.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:55:03 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 45.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:55:15 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:55:24 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 60ms (Views: 47.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:55:33 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 45.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:57:01 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 57ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-18 17:57:25 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-19 09:52:57 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (8.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 82ms (Views: 58.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-19 09:53:24 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-19 09:53:34 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 60ms (Views: 47.5ms | ActiveRecord: 1.0ms)
+
+

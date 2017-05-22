@@ -1,10 +1,23 @@
 class ShortUrlsController < ApplicationController
   def new
-      @short_urls = ShortUrl.new(short_url_params)
+      @short_url = ShortUrl.new()
   end
 
   def create
-      @short_urls = ShortUrl.new(short_url_params)
+      @short_url = ShortUrl.new()
+  		if @short_url.save #esta linea ejecuta un obj.save q devuelve un booleano, si es true...
+  			redirect_to "short_url#index" # nos redirija a ese short_url
+  		else # si es false...
+  			render :new # q nos redirija al "/short_url/new"
+  		end
+  end
+
+  def index
+    @short_url = ShortUrl.all
+  end
+
+  def show
+    @short_url = ShortUrl.find(params[:id])
   end
 
   private
