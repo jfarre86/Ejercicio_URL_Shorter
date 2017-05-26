@@ -1,0 +1,32 @@
+
+------------------------- para agragar un campo a ShortUrl... -------------------------
+
+* Añado a mi "db\migrate\20170515155408_create_short_urls.rb" 
+	dentro del "create_table :short_urls" lña linea:
+
+		t.integer :visits_count
+
+
+[he probado a ejecutar directo "rake db:drop db:create db:migrate" pero al darme error opto por los siguientes pasos]
+
+* Borro el archivo de base de datos "db\development.sqlite3"
+
+* ejecuto el comand "rake db:create db:migrate"
+
+[MAL]
+
+[solución] =>
+
+* Ejecuto "rails g migration add_visits_count_to_short_urls" 
+	# => eso me genera el fichero de migracion en "\db\migrate\20170524161504_add_visits_count_to_short_urls.rb".
+	
+* Añado una linea de código a "\db\migrate\20170524161504_add_visits_count_to_short_urls.rb" dentro de la función Change (que me viene vacía)
+	# => add_column :short_urls, :visits_counter, :integer, default: 0 [el formato es siempre:
+		add_column :nombre_de_tabla, :nombre_de_campo, :tipo_de_dato, default: 0 (este es opcional)
+		]
+
+* Ejecuto "rake db:migrate"
+* y por último comprovamos (por rails console mismo o mirando en el \db\schema.rb) q ahora en la tabla hay el nuevo campo.
+
+
+------------------------- para que... -------------------------

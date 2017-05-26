@@ -4,7 +4,9 @@
 </font>
 
 <% @short_url.all.each do |url|   %>
+
 <h5> <%= url.id %> </h5>
 <p> <%= url.url %> </p>
+<p> visitas: <%= url.visits_counter %> </p>
 <br>
 <% end %>

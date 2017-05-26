@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 # =>   VERBO “PATH”, to: “CONTROLADOR#ACCION”
   get "/short_urls/new", to: "short_urls#new"
   get "/short_urls/index", to: "short_urls#index"
+  get "/short_urls/:id", to: "short_urls#show"
 #  resources :short_url, only[:new, :index, :create] #esto es para poder llamar los verbos [:new, :index, :create] del recurso short_url
 
 

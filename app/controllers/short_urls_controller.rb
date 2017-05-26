@@ -18,6 +18,10 @@ class ShortUrlsController < ApplicationController
 
   def show
     @short_url = ShortUrl.find(params[:id])
+    @short_url.visits_counter = @short_url.visits_counter + 1
+    @short_url.save
+    headers["Status"] = 'ShortUrl - Redireccionando...'
+    redirect_to 'http://' + @short_url.url
   end
 
   private
