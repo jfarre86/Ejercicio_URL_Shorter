@@ -18,11 +18,20 @@ class ShortUrlsController < ApplicationController
 
   def show
     @short_url = ShortUrl.find(params[:id])
-    @short_url.visits_counter = @short_url.visits_counter + 1
-    @short_url.save
+    @url = ''
+    formato_http(@short_url.url)
+    incrementar_visitas(@short_url)
+
     headers["Status"] = 'ShortUrl - Redireccionando...'
-    redirect_to 'http://' + @short_url.url
+    redirect_to @url
   end
+
+
+  def admin
+    @short_url = ShortUrl.all
+  end
+
+
 
   private
 
@@ -34,4 +43,22 @@ class ShortUrlsController < ApplicationController
 		# desde nuestra aplicacion Web LOS OTROS campos como url_id PARA EVITAR
 		# ATAQUES DE USUARIOS MALICIOSOS
 	end
+end
+
+def formato_http(url_original)
+  #esta funcion determina si la url empieza por http// y no pues se lo concatena y devuelve el resultado
+  @url = ''
+  if url_original[1..7] != 'http://' && url_original[1..8] != 'https://'
+    if url_original[1..7] != 'http://'
+      @url = 'http://'
+    else
+      @url = 'https://'
+    end
+  end
+  return @url + url_original
+end
+
+def incrementar_visitas(short_url)
+    short_url.visits_counter = short_url.visits_counter + 1
+    short_url.save
 end

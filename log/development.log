@@ -2193,3 +2193,312 @@ Processing by ShortUrlsController#new as HTML
 Completed 200 OK in 124ms (Views: 97.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-05-26 16:18:30 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 65ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-05-26 16:18:55 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+BbiWUrkJ/jip9IXaWofedcZ6K23V8OxnXj2ekDP5Ieto341NxQehISWTbiz02HHm7GkluTCIyWsk0J1fHyPWg==", "short_url"=>{"url"=>"www.synergie-ett.com/Synergie/"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.synergie-ett.com/Synergie/"], ["created_at", "2017-05-26 14:18:55.973190"], ["updated_at", "2017-05-26 14:18:55.973190"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 24ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 16:27:04 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 87ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/5" for 127.0.0.1 at 2017-05-26 16:33:35 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to 
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/short_urls_controller.rb:22:in `show'
+Started GET "/short_urls/5" for 127.0.0.1 at 2017-05-26 16:34:55 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000www.synergie-ett.com/Synergie/
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 16:35:25 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/5" for 127.0.0.1 at 2017-05-26 16:35:32 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000www.synergie-ett.com/Synergie/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-05-26 16:35:45 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000Clientes.synergie.es
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-05-26 17:13:06 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://Clientes.synergie.es
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/4" for 127.0.0.1 at 2017-05-26 17:13:33 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://tetasgordas.com
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/5" for 127.0.0.1 at 2017-05-26 17:14:21 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://www.synergie-ett.com/Synergie/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/4" for 127.0.0.1 at 2017-05-26 17:14:33 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://tetasgordas.com
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/5" for 127.0.0.1 at 2017-05-26 17:14:45 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://www.synergie-ett.com/Synergie/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:20:37 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-05-26 17:21:25 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://Clientes.synergie.es
+Completed 302 Found in 15ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:21:32 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 45.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-05-26 17:22:05 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 1], ["updated_at", "2017-05-26 15:22:05.663145"], ["id", 1]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://Clientes.synergie.es
+Completed 302 Found in 36ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:22:42 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 57ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/3" for 127.0.0.1 at 2017-05-26 17:24:47 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 1], ["updated_at", "2017-05-26 15:24:47.407318"], ["id", 3]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://www.youtube.com
+Completed 302 Found in 23ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/2" for 127.0.0.1 at 2017-05-26 17:24:57 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 1], ["updated_at", "2017-05-26 15:24:57.771354"], ["id", 2]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://https://stackoverflow.com
+Completed 302 Found in 24ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/short_urls/2" for 127.0.0.1 at 2017-05-26 17:40:43 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 2], ["updated_at", "2017-05-26 15:40:43.130675"], ["id", 2]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://https://stackoverflow.com
+Completed 302 Found in 24ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/short_urls/3" for 127.0.0.1 at 2017-05-26 17:41:14 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 2], ["updated_at", "2017-05-26 15:41:14.870675"], ["id", 3]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://www.youtube.com
+Completed 302 Found in 22ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:49:29 +0200
+  
+SyntaxError (C:/RAILS/Ejercicio_URL_Shorter/app/controllers/short_urls_controller.rb:48: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+  if !(url_original[1..7] = 'http://') @url = 'http://'
+                                           ^):
+  
+app/controllers/short_urls_controller.rb:48: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:52:20 +0200
+  
+SyntaxError (C:/RAILS/Ejercicio_URL_Shorter/app/controllers/short_urls_controller.rb:48: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+  if !(url_original[1..7] == 'http://') @url = 'http://'
+                                            ^):
+  
+app/controllers/short_urls_controller.rb:48: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:52:59 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/RAILS/Ejercicio_URL_Shorter/app/controllers/short_urls_controller.rb:48: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+  if !(url_original[1..7] == 'http://') @url = 'http://'
+                                            ^):
+  
+app/controllers/short_urls_controller.rb:48: syntax error, unexpected tIVAR, expecting keyword_then or ';' or '\n'
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:55:20 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 130ms (Views: 107.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/short_urls/3" for 127.0.0.1 at 2017-05-26 17:55:40 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 3], ["updated_at", "2017-05-26 15:55:40.073599"], ["id", 3]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://www.youtube.com
+Completed 302 Found in 31ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-26 17:55:48 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 56ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/2" for 127.0.0.1 at 2017-05-26 17:56:37 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 3], ["updated_at", "2017-05-26 15:56:37.761367"], ["id", 2]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://https://stackoverflow.com
+Completed 302 Found in 41ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/2" for 127.0.0.1 at 2017-05-26 17:57:59 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 4], ["updated_at", "2017-05-26 15:57:59.617552"], ["id", 2]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://https://stackoverflow.com
+Completed 302 Found in 40ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/short_urls/2" for 127.0.0.1 at 2017-05-26 18:01:22 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 5], ["updated_at", "2017-05-26 16:01:23.060894"], ["id", 2]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://https://stackoverflow.com
+Completed 302 Found in 44ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/short_urls/2" for 127.0.0.1 at 2017-05-26 18:03:34 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 6], ["updated_at", "2017-05-26 16:03:34.106997"], ["id", 2]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 37ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-05-26 18:03:57 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 2], ["updated_at", "2017-05-26 16:03:57.092296"], ["id", 1]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 21ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-05-30 13:44:37 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 119ms (Views: 95.5ms | ActiveRecord: 2.0ms)
+
+

@@ -1,0 +1,13 @@
+<h3>ShortUrls#Admin</h3>
+<font style="color:green;">
+<h4>Bienvenido a la página de Administración de URLs cortas</h4>
+</font>
+
+<% @short_url.all.each do |url|   %>
+
+<h5>ID: <%= url.id %> </h5>
+<p> <%= url.url %> <br>
+    visitas: <%= url.visits_counter %>
+</p>
+<br>
+<% end %>
