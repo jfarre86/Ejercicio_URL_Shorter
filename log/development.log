@@ -2502,3 +2502,445 @@ Processing by ShortUrlsController#index as HTML
 Completed 200 OK in 119ms (Views: 95.5ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/short_urls/admin" for 127.0.0.1 at 2017-06-01 17:36:33 +0200
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"admin"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ShortUrl with 'id'=admin):
+  
+app/controllers/short_urls_controller.rb:20:in `show'
+Started GET "/short_urls/admin" for 127.0.0.1 at 2017-06-01 17:37:12 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"admin"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ShortUrl with 'id'=admin):
+  
+app/controllers/short_urls_controller.rb:20:in `show'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:37:42 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "short_urls" WHERE "short_urls"."id" = ?[0m  [["id", 1]]
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered short_urls/admin.html.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"#<ShortUrl:0x56967f0>", :controller=>"short_urls"}):
+    11:     visitas: <%= url.visits_counter %>
+    12:     <br>
+    13:     <!--<a url="" >eliminar</a> -->
+    14:     <%= link_to "Eliminar", action: url.destroy %>
+    15: </p>
+    16: <br>
+    17: <% end %>
+  
+app/views/short_urls/admin.html.erb:14:in `block in _app_views_short_urls_admin_html_erb___933884041_46886220'
+app/views/short_urls/admin.html.erb:6:in `_app_views_short_urls_admin_html_erb___933884041_46886220'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:38:37 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "short_urls" WHERE "short_urls"."id" = ?[0m  [["id", 2]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered short_urls/admin.html.erb within layouts/application (36.0ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 14.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"#<ShortUrl:0x535e3a8>", :controller=>"short_urls"}):
+    11:     visitas: <%= url.visits_counter %>
+    12:     <br>
+    13:     <!--<a url="" >eliminar</a> -->
+    14:     <%= link_to "Eliminar", action: ShortUrl.destroy(url.id) %>
+    15: </p>
+    16: <br>
+    17: <% end %>
+  
+app/views/short_urls/admin.html.erb:14:in `block in _app_views_short_urls_admin_html_erb___933884041_43856004'
+app/views/short_urls/admin.html.erb:6:in `_app_views_short_urls_admin_html_erb___933884041_43856004'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:48:32 +0200
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:10:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:51:04 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "short_urls" WHERE "short_urls"."id" = ?[0m  [["id", 3]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered short_urls/admin.html.erb within layouts/application (43.0ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 13.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"#<ShortUrl:0x551c9d0>", :controller=>"short_urls"}):
+    11:     visitas: <%= url.visits_counter %>
+    12:     <br>
+    13:     <!--<a url="" >eliminar</a> -->
+    14:     <%= link_to "Eliminar", action: ShortUrl.destroy(url.id) %>
+    15: </p>
+    16: <br>
+    17: <% end %>
+  
+app/views/short_urls/admin.html.erb:14:in `block in _app_views_short_urls_admin_html_erb___933884041_45492312'
+app/views/short_urls/admin.html.erb:6:in `_app_views_short_urls_admin_html_erb___933884041_45492312'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:54:17 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "short_urls" WHERE "short_urls"."id" = ?[0m  [["id", 4]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered short_urls/admin.html.erb within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 15.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"#<ShortUrl:0x5bc88e8>", :controller=>"short_urls"}):
+    11:     visitas: <%= url.visits_counter %>
+    12:     <br>
+    13:     <!--<a url="" >eliminar</a>
+    14:     <%= link_to "Eliminar", action: ShortUrl.destroy(url.id) %>  -->
+    15: </p>
+    16: <br>
+    17: <% end %>
+  
+app/views/short_urls/admin.html.erb:14:in `block in _app_views_short_urls_admin_html_erb___933884041_29948640'
+app/views/short_urls/admin.html.erb:6:in `_app_views_short_urls_admin_html_erb___933884041_29948640'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:56:08 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "short_urls" WHERE "short_urls"."id" = ?[0m  [["id", 5]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered short_urls/admin.html.erb within layouts/application (36.0ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 15.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"#<ShortUrl:0x546ff48>", :controller=>"short_urls"}):
+    11:     visitas: <%= url.visits_counter %>
+    12:     <br>
+    13:     <!--<a url="" >eliminar</a>
+    14:     <%= link_to "Eliminar", action: ShortUrl.destroy(url.id) %>  -->
+    15: </p>
+    16: <br>
+    17: <% end %>
+  
+app/views/short_urls/admin.html.erb:14:in `block in _app_views_short_urls_admin_html_erb___933884041_44429820'
+app/views/short_urls/admin.html.erb:6:in `_app_views_short_urls_admin_html_erb___933884041_44429820'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 17:56:45 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/admin.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 116ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 18:01:30 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/admin.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 18:02:24 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/admin.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 53ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 18:02:29 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/admin.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-06-01 18:02:54 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 53ms (Views: 40.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/1" for 127.0.0.1 at 2017-06-01 18:03:12 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ShortUrl with 'id'=1):
+  
+app/controllers/short_urls_controller.rb:20:in `show'
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-06-01 18:03:23 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 62ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-06-01 18:03:55 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UBcgsneUFbjnRCubFs8ZG5qqswWpNh5gteHE6MP9RLoForzeCmQsxIF1tDTMdmel1gL/Pvqj/vSECnDn/04vZw==", "short_url"=>{"url"=>"www.wetransfer.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.wetransfer.com"], ["created_at", "2017-06-01 16:03:55.525149"], ["updated_at", "2017-06-01 16:03:55.525149"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 21ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-06-01 18:04:10 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-06-01 18:04:54 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gkCG04Z0oYBT3VdISeF2bPakK1LtkGWgTPvTFm5B7g/X9Rq/+4SY/DXsyOeTWAjSugxnab4FhTR9EGcZUvKF0g==", "short_url"=>{"url"=>"www.virustotal.com/es/"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.virustotal.com/es/"], ["created_at", "2017-06-01 16:04:54.620149"], ["updated_at", "2017-06-01 16:04:54.620149"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 19ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-06-01 18:04:57 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 51ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-06-01 18:05:12 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z86eGCYQAxBMpCV374nZwMAcxZ7LnkycNn9iWeN797maewJ0W+A6bCqVutg1MKd+jLSJpZgLrAgHlNZW38icZA==", "short_url"=>{"url"=>"clientes.synergie.es"}, "commit"=>"Guardar"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "clientes.synergie.es"], ["created_at", "2017-06-01 16:05:12.395149"], ["updated_at", "2017-06-01 16:05:12.395149"]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 19ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-06-01 18:05:13 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-06-01 18:05:31 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ki99EtwnxqZvEEu0+GkCXC6nXn6QIhRAMY/axnfcYyh/muF+odf/2gkh1Bsi0HziYg8SRcO39NQAZG7JS28I9Q==", "short_url"=>{"url"=>"www.flaixfm.cat/player"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.flaixfm.cat/player"], ["created_at", "2017-06-01 16:05:31.419149"], ["updated_at", "2017-06-01 16:05:31.419149"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 19ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-06-01 18:05:33 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-06-01 18:05:49 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5PKUiC5v2Ei9N+VXBDL+Wm7228zNTH2K/rgts+23L3uxRwjkU5/hNNsGevjei4DkIl6X957ZnR7PU5m80QREpg==", "short_url"=>{"url"=>"www.apple.com/es/music/radio/"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.apple.com/es/music/radio/"], ["created_at", "2017-06-01 16:05:49.139149"], ["updated_at", "2017-06-01 16:05:49.139149"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 22ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/new" for 127.0.0.1 at 2017-06-01 18:05:53 +0200
+Processing by ShortUrlsController#new as HTML
+  Rendering short_urls/new.html.erb within layouts/application
+  Rendered short_urls/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/short_urls" for 127.0.0.1 at 2017-06-01 18:06:21 +0200
+Processing by ShortUrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vzzozw6dSNxna56FJD9u1KfxgTbLq0V1sCz0eVSCz5LqiXSjc21xoAFaASr+hhBq61nNDZg+peGBx0B2aDGkTw==", "short_url"=>{"url"=>"www.citrix.com"}, "commit"=>"Guardar"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "short_urls" ("url", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["url", "www.citrix.com"], ["created_at", "2017-06-01 16:06:21.904149"], ["updated_at", "2017-06-01 16:06:21.904149"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000short_url#index
+Completed 302 Found in 19ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-06-01 18:06:29 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 40.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/short_urls/admin" for 127.0.0.1 at 2017-06-01 18:06:36 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"admin"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ShortUrl with 'id'=admin):
+  
+app/controllers/short_urls_controller.rb:20:in `show'
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 18:07:08 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/admin.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 41.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-06-01 18:08:39 +0200
+Processing by ShortUrlsController#admin as HTML
+  Rendering short_urls/admin.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/admin.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 58ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/short_urls/6" for 127.0.0.1 at 2017-06-01 18:09:43 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 1], ["updated_at", "2017-06-01 16:09:43.285149"], ["id", 6]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 23ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/6+%C3%A7" for 127.0.0.1 at 2017-06-01 18:09:55 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"6+ç"}
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 2], ["updated_at", "2017-06-01 16:09:55.324149"], ["id", 6]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 22ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/short_urls" for 127.0.0.1 at 2017-06-01 18:10:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/short_urls"):
+  
+actionpack (5.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.0) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.0) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.0) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `call'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/short_urls/8" for 127.0.0.1 at 2017-06-01 18:10:09 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mShortUrl Load (1.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 1], ["updated_at", "2017-06-01 16:10:09.992149"], ["id", 8]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 23ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/short_urls/7" for 127.0.0.1 at 2017-06-01 18:10:15 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 1], ["updated_at", "2017-06-01 16:10:15.687149"], ["id", 7]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 21ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/short_urls/6" for 127.0.0.1 at 2017-06-01 18:16:48 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 3], ["updated_at", "2017-06-01 16:16:48.735873"], ["id", 6]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 21ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/short_urls/6" for 127.0.0.1 at 2017-06-01 18:17:52 +0200
+Processing by ShortUrlsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT  "short_urls".* FROM "short_urls" WHERE "short_urls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "short_urls" SET "visits_counter" = ?, "updated_at" = ? WHERE "short_urls"."id" = ?[0m  [["visits_counter", 4], ["updated_at", "2017-06-01 16:17:52.340233"], ["id", 6]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://
+Completed 302 Found in 35ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/short_urls/index" for 127.0.0.1 at 2017-06-01 18:17:56 +0200
+Processing by ShortUrlsController#index as HTML
+  Rendering short_urls/index.html.erb within layouts/application
+  [1m[36mShortUrl Load (0.0ms)[0m  [1m[34mSELECT "short_urls".* FROM "short_urls"[0m
+  Rendered short_urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 53ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
